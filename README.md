@@ -2,7 +2,9 @@
 
 :smiley_cat: ***"У компьютерщиков даже кошка мурлыкает "url-url-url..."*** :smiley_cat:
 
-**[Скачать](https://github.com/LencoDigitexer/TamagochiCat/releases)**
+**[Скачать](https://yadi.sk/d/ZhHb78_ivOe-0g)**  :link:
+<br>
+**[VT](https://www.virustotal.com/gui/file/e2b969a5fad4458b77d3bd72e3e091f4b96340e95c9679fc534feef7b462f895/detection)** :heavy_check_mark:
 
 А помните первые тамагочи? 23 ноября 1996 года компания Bandai выпустила в продажу первую версию Тамагочи — небольшой пластиковой игрушки в форме яйца с чёрно-белым экранчиком и тремя кнопками. 
 
