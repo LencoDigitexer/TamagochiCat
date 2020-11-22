@@ -20,13 +20,13 @@ void sleep()
 	ofstream log("log.txt", ios::app);
 	time_t seconds = time(NULL);
 	tm* timeinfo = localtime(&seconds);
-	log << "Êîò ñïèò " << asctime(timeinfo) << endl;
+	log << "Кот спит " << asctime(timeinfo) << endl;
 	int satiety, happy, sleep, sleep2, happy2;
 	ifstream in("stat.txt", ios::app);
 	ofstream out("stat2.txt", ios::app);
 	in >> satiety >> happy >> sleep;
 	system("start sleep.mp3");
-	cout << "Òâîé êîò çàñûïàåò..." << endl;
+	cout << "Твой кот засыпает..." << endl;
 	cout << R"(
                                __
                          _,-;''';`'-,.
@@ -51,7 +51,7 @@ _pb__\,`"=,,,=="',___,,,-----'''----'_'_'_''-;''
 	system("cls");
 	for (int i = 0; i < 5; i++)
 	{
-		cout << "Òâîé êîò çàñûïàåò..." << endl;
+		cout << "Твой кот засыпает..." << endl;
 		cout << R"(
                                __
                          _,-;''';`'-,.
@@ -74,7 +74,7 @@ _pb__\,`"=,,,=="',___,,,-----'''----'_'_'_''-;''
 		
 		Sleep(1700);
 		system("cls");
-		cout << "Òâîé êîò çàñûïàåò..." << endl;
+		cout << "Твой кот засыпает..." << endl;
 		cout << R"(
                                __
                          _,-;''';`'-,.
@@ -101,7 +101,7 @@ _pb__\,`"=,,,=="',___,,,-----'''----'_'_'_''-;''
 	srand((unsigned)time(NULL));
 	for (int i = 0; i < rand() % 50 + 40; i++)
 	{
-		cout << "Òâîé êîò çàñíóë..." << endl;
+		cout << "Твой кот заснул..." << endl;
 		cout << R"(
                                __
                          _,-;''';`'-,.
@@ -126,7 +126,7 @@ _pb__\,`"=,,,=="',___,,,-----'''----'_'_'_''-;''
 	}
 	sleep2 = sleep + 50;
 	happy2 = happy - 50;
-	cout << "È ïðîñíóëñÿ." << endl;
+	cout << "И проснулся." << endl;
 	PlaySound(L"cat-meow8.wav", NULL, NULL);
 	cout << R"(
       ,/|         _.--''^``-...___.._.,;
@@ -138,13 +138,13 @@ _pb__\,`"=,,,=="',___,,,-----'''----'_'_'_''-;''
 	Sleep(2500);
 	system("cls");
 	out << satiety << " " << happy2 << " " << sleep2;
-	cout << "Ñûòîñòü = " << satiety << " Ñ÷àñòüå = " << happy2 << " Ñîí = " << sleep2;
+	cout << "Сытость = " << satiety << " Счастье = " << happy2 << " Сон = " << sleep2;
 	Sleep(5000);
 	out.close();
 	in.close();
 	if (remove("stat.txt") != 0)
 	{
-		cout << "Îøèáêà óäàëåíèÿ ôàéëàn";
+		cout << "Ошибка удаления файлаn";
 	}
 	rename("stat2.txt", "stat.txt");
 	system("start intro.mp3");
@@ -156,7 +156,7 @@ void stat()
 	system("cls");
 	ifstream fin("stat.txt");
 	fin >> satiety >> happy >> sleep;
-	cout << "Ñûòîñòü = " << satiety << " Ñ÷àñòüå = " << happy << " Ñîí = " << sleep;
+	cout << "Сытость = " << satiety << " Счастье = " << happy << " Сон = " << sleep;
 	Sleep(2000);
 	system("cls");
 }
@@ -176,21 +176,21 @@ int eat()
 	ofstream log("log.txt", ios::app);
 	time_t seconds = time(NULL);
 	tm* timeinfo = localtime(&seconds);
-	log << "Êîò åñò " << asctime(timeinfo) << endl;
+	log << "Кот ест " << asctime(timeinfo) << endl;
 	int satiety, happy, sleep, satiety2;
 	ifstream in("stat.txt", ios::app);
 	ofstream out("stat2.txt", ios::app);
 	in >> satiety >> happy >> sleep;
 	setlocale(LC_ALL, "ru");
 	system("cls");
-	cout << "Òâîé êîò åñò\n";
-	cout << "Æäè"<<endl;
+	cout << "Твой кот ест\n";
+	cout << "Жди"<<endl;
 	system("cls");
 	satiety2 = 0;
 	srand((unsigned)time(NULL));
 	for (int i = 0; i < rand() % 5 + 2; i++) 
 	{
-		cout << "Õðóì"<<endl;
+		cout << "Хрум"<<endl;
 		cout << R"(     /\__/\)" << endl;
 		cout << R"(    /`    '\)" << endl;
 		cout << R"(  === 0  0 ===)" << endl;
@@ -200,10 +200,10 @@ int eat()
 		cout << R"( |            |)" << endl;
 		cout << R"(  \  ||  ||  /)" << endl;
 		cout << R"(   \_oo__oo_/#######o)" << endl;
-		cout << "Êîò ñúåë êîðìà --> " << i << endl;
+		cout << "Кот съел корма --> " << i << endl;
 		Sleep(1000);
 		system("cls");
-		cout << "Õðóì" << endl;
+		cout << "Хрум" << endl;
 		cout << R"(     /\__/\)" << endl;
 		cout << R"(    /`    '\)" << endl;
 		cout << R"(  === 0  0 ===)" << endl;
@@ -213,27 +213,27 @@ int eat()
 		cout << R"( |            |)" << endl;
 		cout << R"(  \  ||  ||  /)" << endl;
 		cout << R"(   \_oo__oo_/#######o)" << endl;
-		cout << "Êîò ñúåë êîðìà --> "<< i << endl;
+		cout << "Кот съел корма --> "<< i << endl;
 		PlaySound(L"cat-lick.wav", NULL, NULL);
-		Sleep(1000); // æäàòü 1 ñåêóíä, âðåìÿ ýòà ôóíêöèÿ ñ÷èòàåò â òûñÿ÷íûõ äîëÿõ ñåêóíäû
+		Sleep(1000); // ждать 1 секунд, время эта функция считает в тысячных долях секунды
 		satiety2 = satiety + (i*15);
 		system("cls");
 	}
 	
-	cout << "Ñïàñèáî, ÌßÓ!!!\n" << endl;
+	cout << "Спасибо, МЯУ!!!\n" << endl;
 	cout << R"(        |\__/,|   (`\)" << endl;
 	cout << R"(      _.|o o  |_   ) ))" << endl;
 	cout << R"(  ---(((---(((---------)" << endl;
 	PlaySound(L"cat-meow8.wav", NULL, NULL);
 	Sleep(5000);
 	out << satiety2 << " " << happy << " " << sleep;
-	cout << "Ñûòîñòü = " << satiety2 << " Ñ÷àñòüå = " << happy << " Ñîí = " << sleep;
+	cout << "Сытость = " << satiety2 << " Счастье = " << happy << " Сон = " << sleep;
 	Sleep(2000);
 	out.close();
 	in.close();
 	if (remove("stat.txt") != 0)
 	{
-		cout << "Îøèáêà óäàëåíèÿ ôàéëàn";
+		cout << "Ошибка удаления файлаn";
 	}
 	rename("stat2.txt", "stat.txt");
 	return 0;
@@ -257,7 +257,7 @@ void walk()
 {
 	int satiety, happy, sleep, happy2, sleep2, satiety2;
 	system("cls");
-	cout << "Òâîé êîò âûøåë ïîãóëÿòü."<<endl;
+	cout << "Твой кот вышел погулять."<<endl;
 	cout << R"(                _             )" << endl;
 	cout << R"(                \`*-.            )" << endl;
 	cout << R"(                 )  _`-.          )" << endl;
@@ -285,11 +285,11 @@ void walk()
 		ofstream log("log.txt", ios::app);
 		time_t seconds = time(NULL);
 		tm* timeinfo = localtime(&seconds);
-		log << "Êîò çàëåç íà äåðåâî " << asctime(timeinfo) << endl;
+		log << "Кот залез на дерево " << asctime(timeinfo) << endl;
 		ifstream in("stat.txt", ios::app);
 		ofstream out("stat2.txt", ios::app);
 		in >> satiety >> happy >> sleep;
-		cout << "Òâîé êîò ðåøèë çàëåçòü íà äåðåâî" << endl;
+		cout << "Твой кот решил залезть на дерево" << endl;
 		Sleep(1500);
 		cout << R"(        .
        -.\_.--._.______.-------.___.---------.___
@@ -316,7 +316,7 @@ __________((  _.'__       .-'  J              _.-'   .'        `. \
 
 		Sleep(2000);
 		system("cls");
-		cout << "Òâîé êîò ðåøèë çàëåçòü íà äåðåâî" << endl;
+		cout << "Твой кот решил залезть на дерево" << endl;
 		PlaySound(L"cat-meow5.wav", NULL, NULL);
 		cout << R"(
                                                                .-.        .-.
@@ -348,7 +348,7 @@ __________((  _.'__       .-'  J              _.-'   .'        `. \
                                                                   "")" << endl;
 		Sleep(200);
 		system("cls");
-		cout << "Òâîé êîò ðåøèë çàëåçòü íà äåðåâî" << endl;
+		cout << "Твой кот решил залезть на дерево" << endl;
 		
 		cout << R"(
                                                     _                 
@@ -378,7 +378,7 @@ __________((  _.'__       .-'  J              _.-'   .'        `. \
                ""  )" << endl;
 		Sleep(200);
 		system("cls");
-		cout << "Òâîé êîò ðåøèë çàëåçòü íà äåðåâî" << endl;
+		cout << "Твой кот решил залезть на дерево" << endl;
 		cout << R"(
                                                  _.,._./)
                                              .-''        `-.
@@ -401,7 +401,7 @@ __________((  _.'__       .-'  J              _.-'   .'        `. \
                                   `-')" << endl;
 		Sleep(200);
 		system("cls");
-		cout << "Òâîé êîò ðåøèë çàëåçòü íà äåðåâî" << endl;
+		cout << "Твой кот решил залезть на дерево" << endl;
 		cout << R"(
                                            ______  .----.___
                                        .--'      `' `-      `-.
@@ -433,7 +433,7 @@ __________((  _.'__       .-'  J              _.-'   .'        `. \
                              `-'')" << endl;
 		Sleep(200);
 		system("cls");
-		cout << "Òâîé êîò ðåøèë çàëåçòü íà äåðåâî" << endl;
+		cout << "Твой кот решил залезть на дерево" << endl;
 
 		cout << R"(
                                                                 .-""-.__
@@ -468,7 +468,7 @@ __________((  _.'__       .-'  J              _.-'   .'        `. \
                                                 )" << endl;
 		Sleep(200);
 		system("cls");
-		cout << "Òâîé êîò ðåøèë çàëåçòü íà äåðåâî" << endl;
+		cout << "Твой кот решил залезть на дерево" << endl;
 		cout << R"(
                                                                                  .--.
                                                                                 J    L
@@ -507,7 +507,7 @@ __________((  _.'__       .-'  J              _.-'   .'        `. \
                                                               '-')" << endl;
 		Sleep(200);
 		system("cls");
-		cout << "Òâîé êîò ðåøèë çàëåçòü íà äåðåâî" << endl;
+		cout << "Твой кот решил залезть на дерево" << endl;
 		cout << R"(
                                                .--.
                                                `.  \
@@ -536,22 +536,22 @@ __________((  _.'__       .-'  J              _.-'   .'        `. \
                   '     /               `-----''               /     |
                   `...-'                                       !_____))" << endl;
 
-		cout << "È óïàë. Çàòî õîðîøî ïðîãóëÿëñÿ. " << endl;
+		cout << "И упал. Зато хорошо прогулялся. " << endl;
 		//ofstream log("log.txt", ios::app);
 		//time_t seconds = time(NULL);
 		//tm* timeinfo = localtime(&seconds);
-		log << "Êîò óïàë ñ äåðåâà " << asctime(timeinfo) << endl;
+		log << "Кот упал с дерева " << asctime(timeinfo) << endl;
 		happy2 = happy + 20;
 		sleep2 = sleep - 15;
 		satiety2 = satiety - 5;
 		out << satiety2 << " " << happy2 << " " << sleep2;
-		cout << "Ñûòîñòü = " << satiety2 << " Ñ÷àñòüå = " << happy2 << " Ñîí = " << sleep2;
+		cout << "Сытость = " << satiety2 << " Счастье = " << happy2 << " Сон = " << sleep2;
 		Sleep(5000);
 		out.close();
 		in.close();
 		if (remove("stat.txt") != 0)
 		{
-			cout << "Îøèáêà óäàëåíèÿ ôàéëàn";
+			cout << "Ошибка удаления файлаn";
 		}
 		rename("stat2.txt", "stat.txt");
 		system("cls");
@@ -561,12 +561,12 @@ __________((  _.'__       .-'  J              _.-'   .'        `. \
 		ofstream log("log.txt", ios::app);
 		time_t seconds = time(NULL);
 		tm* timeinfo = localtime(&seconds);
-		log << "Êîò äóìàåò " << asctime(timeinfo) << endl;
+		log << "Кот думает " << asctime(timeinfo) << endl;
 		ifstream in("stat.txt", ios::app);
 		ofstream out("stat2.txt", ios::app);
 		in >> satiety >> happy >> sleep;
 		system("start coy.wav");
-		cout << "Òâîé êîò ðåøèë ñïîêîéíî ïîñèäåòü íà çàáîðå è ïîäóìàòü î åãî êîøà÷åé æèçíè." << endl;
+		cout << "Твой кот решил спокойно посидеть на заборе и подумать о его кошачей жизни." << endl;
 		Sleep(1500);
 		srand((unsigned)time(NULL));
 		n = rand() % 5 + 2;
@@ -610,13 +610,13 @@ __________((  _.'__       .-'  J              _.-'   .'        `. \
 		sleep2 = sleep - 10;
 		satiety2 = satiety - 10;
 		out << satiety2 << " " << happy2 << " " << sleep2;
-		cout << "Ñûòîñòü = " << satiety << " Ñ÷àñòüå = " << happy2 << " Ñîí = " << sleep2;
+		cout << "Сытость = " << satiety << " Счастье = " << happy2 << " Сон = " << sleep2;
 		Sleep(5000);
 		out.close();
 		in.close();
 		if (remove("stat.txt") != 0)
 		{
-			cout << "Îøèáêà óäàëåíèÿ ôàéëàn";
+			cout << "Ошибка удаления файлаn";
 		}
 		rename("stat2.txt", "stat.txt");
 		system("cls");
@@ -627,7 +627,7 @@ __________((  _.'__       .-'  J              _.-'   .'        `. \
 		ofstream log("log.txt", ios::app);
 		time_t seconds = time(NULL);
 		tm* timeinfo = localtime(&seconds);
-		log << "Êîò ãóëÿåò íî÷üþ " << asctime(timeinfo) << endl;
+		log << "Кот гуляет ночью " << asctime(timeinfo) << endl;
 		ifstream in("stat.txt", ios::app);
 		ofstream out("stat2.txt", ios::app);
 		in >> satiety >> happy >> sleep;
@@ -787,13 +787,13 @@ __________((  _.'__       .-'  J              _.-'   .'        `. \
 	sleep2 = sleep - 10;
 	satiety2 = satiety - 5;
 	out << satiety2 << " " << happy2 << " " << sleep;
-	cout << "Ñûòîñòü = " << satiety2 << " Ñ÷àñòüå = " << happy2 << " Ñîí = " << sleep2;
+	cout << "Сытость = " << satiety2 << " Счастье = " << happy2 << " Сон = " << sleep2;
 	Sleep(5000);
 	out.close();
 	in.close();
 	if (remove("stat.txt") != 0)
 	{
-		cout << "Îøèáêà óäàëåíèÿ ôàéëàn";
+		cout << "Ошибка удаления файлаn";
 	}
 	rename("stat2.txt", "stat.txt");
 	system("cls");
@@ -804,7 +804,7 @@ __________((  _.'__       .-'  J              _.-'   .'        `. \
 void wait()
 {
 	
-	cout << "Ïðèâåò, ýòî òâîé êîò." << endl;
+	cout << "Привет, это твой кот." << endl;
 	cout << R"(   |\_._/| )" << endl;
 	cout << "   | o o | " << endl;
 	cout << "   (  T  ) " << endl;
@@ -816,7 +816,7 @@ void wait()
 	Sleep(500);
 	system("cls");
 	
-	cout << "Ïðèâåò, ýòî òâîé êîò." << endl;
+	cout << "Привет, это твой кот." << endl;
 	cout << R"(   |,\__/| )" << endl;
 	cout << "   |  o o| " << endl;
 	cout << "   (   T ) " << endl;
@@ -829,7 +829,7 @@ void wait()
 	system("cls");
 
 	
-	cout << "Ïðèâåò, ýòî òâîé êîò." << endl;
+	cout << "Привет, это твой кот." << endl;
 	cout << R"(   |\__/,| )" << endl;
 	cout << "   |o o  | " << endl;
 	cout << "   ( T   ) " << endl;
@@ -858,7 +858,7 @@ int main()
 	cout << "  (           )" << endl;
 	cout << " ( (  )   (  ) )" << endl;
 	cout << "(__(__)___(__)__)" << endl;
-	cout << "    Çàãðóçêà" << endl;
+	cout << "    Загрузка" << endl;
 	
 	Sleep(1000);
 	system("cls");
@@ -875,7 +875,7 @@ int main()
 			ifstream in("stat.txt", ios::app);
 			in >> satiety >> happy >> son;
 			in.close();
-			cout << "Ñûòîñòü = " << satiety << " Ñ÷àñòüå = " << happy << " Ñîí = " << son << endl;
+			cout << "Сытость = " << satiety << " Счастье = " << happy << " Сон = " << son << endl;
 			Sleep(5000);
 			system("cls");
 			if (satiety < happy && satiety < son)
@@ -883,9 +883,9 @@ int main()
 				ofstream log("log.txt", ios::app);
 				time_t seconds = time(NULL);
 				tm* timeinfo = localtime(&seconds);
-				log << "Êîò ïðîãîëîäàëñÿ " << asctime(timeinfo) << endl;
+				log << "Кот проголодался " << asctime(timeinfo) << endl;
 				log.close();
-				cout << "Òâîé êîò ãîëîäíûé" << endl;
+				cout << "Твой кот голодный" << endl;
 				Sleep(1500);
 				system("cls");
 				eat();
@@ -895,9 +895,9 @@ int main()
 				ofstream log("log.txt", ios::app);
 				time_t seconds = time(NULL);
 				tm* timeinfo = localtime(&seconds);
-				log << "Êîò õî÷åò ãóëÿòü " << asctime(timeinfo) << endl;
+				log << "Кот хочет гулять " << asctime(timeinfo) << endl;
 				log.close();
-				cout << "Òâîé êîò õî÷åò ïîãóëÿòü" << endl;
+				cout << "Твой кот хочет погулять" << endl;
 				Sleep(1500);
 				system("cls");
 				walk();
@@ -907,9 +907,9 @@ int main()
 				ofstream log("log.txt", ios::app);
 				time_t seconds = time(NULL);
 				tm* timeinfo = localtime(&seconds);
-				log << "Êîò õî÷åò ñïàòü " << asctime(timeinfo) << endl;
+				log << "Кот хочет спать " << asctime(timeinfo) << endl;
 				log.close();
-				cout << "Òâîé êîò õî÷åò ñïàòü" << endl;
+				cout << "Твой кот хочет спать" << endl;
 				Sleep(1500);
 				system("cls");
 				sleep();
@@ -919,9 +919,9 @@ int main()
 				ofstream log("log.txt", ios::app);
 				time_t seconds = time(NULL);
 				tm* timeinfo = localtime(&seconds);
-				log << "Êîò õî÷åò ñïàòü " << asctime(timeinfo) << endl;
+				log << "Кот хочет спать " << asctime(timeinfo) << endl;
 				log.close();
-				cout << "Òâîé êîò ñûò è ñ÷àñòëèâ" << endl;
+				cout << "Твой кот сыт и счастлив" << endl;
 				Sleep(1500);
 				system("cls");
 				sleep();
@@ -931,9 +931,9 @@ int main()
 				ofstream log("log.txt", ios::app);
 				time_t seconds = time(NULL);
 				tm* timeinfo = localtime(&seconds);
-				log << "Êîò õî÷åò ãóëÿòü " << asctime(timeinfo) << endl;
+				log << "Кот хочет гулять " << asctime(timeinfo) << endl;
 				log.close();
-				cout << "Òâîé êîò ñûò è áîäð" << endl;
+				cout << "Твой кот сыт и бодр" << endl;
 				Sleep(1500);
 				system("cls");
 				walk();
@@ -943,9 +943,9 @@ int main()
 				ofstream log("log.txt", ios::app);
 				time_t seconds = time(NULL);
 				tm* timeinfo = localtime(&seconds);
-				log << "Êîò ïðîãîëîäàëñÿ " << asctime(timeinfo) << endl;
+				log << "Кот проголодался " << asctime(timeinfo) << endl;
 				log.close();
-				cout << "Òâîé êîò ñ÷àñòëèâ è áîäð" << endl;
+				cout << "Твой кот счастлив и бодр" << endl;
 				Sleep(1500);
 				system("cls");
 				eat();
